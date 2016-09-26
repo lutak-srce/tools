@@ -2,9 +2,14 @@
 #
 # This modules installs git
 #
-class tools::git {
+class tools::git (
+  $package_git    = 'git',
+  $package_gitsvn = 'git-svn',
+) {
 
-  package { 'git':     ensure  => latest, }
-  package { 'git-svn': ensure  => latest, }
+  Package { ensure => latest }
+
+  package { 'git':     name  => $package_git,    }
+  package { 'git-svn': name  => $package_gitsvn, }
 
 }
