@@ -5,4 +5,5 @@
 #
 class tools::gcloudsdk {
   package { 'google-cloud-sdk': }
+  package { 'kubectl': }
 }
