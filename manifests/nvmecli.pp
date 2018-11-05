@@ -7,7 +7,9 @@ class tools::nvmecli {
     default: { }
     /(Debian|debian|Ubuntu|ubuntu)/: { }
     /(RedHat|redhat|amazon)/: {
-      package { 'nvme-cli': }
+      if $facts['os']['release']['major'] == 7 {
+        package { 'nvme-cli': }
+      }
     }
   }
 
