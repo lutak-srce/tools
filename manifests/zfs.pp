@@ -4,6 +4,7 @@
 # This class installs ZFSonLinux
 #
 class tools::zfs (
+  $zfs_arc_min = undef,
   $zfs_arc_max = '2147483648',
 ){
 

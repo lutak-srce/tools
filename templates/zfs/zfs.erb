@@ -1,3 +1,11 @@
+<% if @zfs_arc_min -%>
+# zfs_arc_min
+# 
+# Determines the minimum size of the ZFS Adaptive Replacement Cache (ARC).
+# Default: 12% of memory on on large memory systems
+options zfs zfs_arc_min=<%= @zfs_arc_min %>
+
+<% end -%>
 # zfs_arc_max
 # 
 # Determines the maximum size of the ZFS Adaptive Replacement Cache (ARC).
