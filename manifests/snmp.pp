@@ -4,7 +4,7 @@
 #
 class tools::snmp {
 
-  case $::osfamily {
+  case $facts['os']['family'] {
     default: {}
     /(RedHat|redhat|amazon)/: {
       package { 'net-snmp':       ensure => present, }

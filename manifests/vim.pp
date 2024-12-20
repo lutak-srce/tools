@@ -2,7 +2,7 @@
 # = Class: tools::vim
 #
 class tools::vim {
-  case $::osfamily {
+  case $facts['os']['family'] {
     default: { }
     /(Debian|debian|Ubuntu|ubuntu)/: {
       package { 'vim': ensure => present, }
