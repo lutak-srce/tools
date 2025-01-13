@@ -8,10 +8,10 @@ class tools::iptables (
   $ipv6_source = 'puppet:///modules/tools/ip6tables',
 ) {
 
-  case $::operatingsystem {
+  case $facts['os']['name'] {
     default: {}
     'CentOS' : {
-      case $::operatingsystemrelease {
+      case $facts['os']['release']['full'] {
         default: {
           package { 'iptables': }
 

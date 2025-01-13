@@ -3,7 +3,7 @@
 #
 class tools::netcat {
 
-  case $::operatingsystemrelease {
+  case $facts['os']['release']['full'] {
     default: {
       package { 'netcat': }
     }

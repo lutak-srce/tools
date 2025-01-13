@@ -3,7 +3,7 @@
 #
 class tools::nvmecli {
 
-  case $::osfamily {
+  case $facts['os']['family'] {
     default: { }
     /(Debian|debian|Ubuntu|ubuntu)/: { }
     /(RedHat|redhat|amazon)/: {

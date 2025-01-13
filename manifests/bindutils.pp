@@ -3,7 +3,7 @@
 #
 class tools::bindutils {
 
-  case $::osfamily {
+  case $facts['os']['family'] {
     default: { }
     /(Debian|debian|Ubuntu|ubuntu)/: {
       package { 'bind9utils': ensure => present, }

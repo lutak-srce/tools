@@ -4,7 +4,7 @@
 # PDF rendering library
 class tools::poppler {
 
-  case $::osfamily {
+  case $facts['os']['family'] {
     default: { }
     /(Debian|debian|Ubuntu|ubuntu)/: { }
     /(RedHat|redhat|amazon)/: {
